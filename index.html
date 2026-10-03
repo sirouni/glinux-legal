@@ -3,16 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>gLinux</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="gLinux brings a ready-to-use Alpine Linux command line to your Apple Silicon Mac. No image download required.">
+  <meta property="og:title" content="gLinux — Linux, one click away">
+  <meta property="og:description" content="A ready-to-use Alpine Linux shell for your Apple Silicon Mac.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sirouni.github.io/glinux-legal/assets/glinux-shell.jpg">
+  <title>gLinux — Linux, one click away</title>
+  <link rel="icon" href="assets/glinux-icon.png">
+  <link rel="stylesheet" href="landing.css">
 </head>
 <body>
-  <main>
-    <nav><a href="./">gLinux</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="https://github.com/sirouni/glinux-legal/issues">Issues ↗</a></nav>
-    <h1>gLinux</h1>
-    <p>A local Alpine Linux command line for your Apple Silicon Mac.</p>
-    <p><a class="button" href="privacy.html">Privacy Policy</a> <a class="button" href="support.html">Support</a></p>
-    <p lang="zh-Hans">在 Apple Silicon Mac 上使用本地 Alpine Linux 命令行。</p>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="./" aria-label="gLinux home"><span class="prompt" aria-hidden="true">&gt;_</span> gLinux</a>
+    <nav aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <h1 id="hero-title">Linux, one click away.</h1>
+      <p class="hero-subtitle">A ready-to-use Alpine Linux shell for your Mac.</p>
+      <span class="store-status" aria-label="Coming to Mac App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.1 12.5c0-2 1.6-3 1.7-3.1-.9-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.2.7-2.8.7-.7 0-1.7-.7-2.7-.7-1.4 0-2.8.9-3.5 2.2-1.5 2.6-.4 6.5 1 8.6.7 1 1.5 2 2.5 2 .9 0 1.2-.6 2.6-.6s1.6.6 2.6.6 1.7-.9 2.3-1.9c.8-1.1 1.1-2.2 1.1-2.3-1.5-.6-2.5-2-2.5-3.9ZM15.1 6.6c.6-.7 1.1-1.7 1-2.6-.9.1-1.9.7-2.5 1.4-.6.7-1.1 1.6-1 2.5.9.1 1.9-.5 2.5-1.3Z"/></svg>Coming to Mac App Store</span>
+      <figure class="product-window"><img src="assets/glinux-shell.jpg" width="780" height="520" alt="gLinux running Alpine Linux commands in a Mac window: echo Hello Linux and uname -m returning aarch64"></figure>
+    </section>
+    <section id="features" class="features wrap" aria-label="Features">
+      <article><span class="feature-icon" aria-hidden="true">&gt;_</span><h2>Ready when you are</h2><p>Open the app and start using the included Alpine Linux command line. No Linux image download or setup step.</p></article>
+      <article><span class="feature-icon apple" aria-hidden="true">⌘</span><h2>Built for Apple Silicon</h2><p>Run an aarch64 Linux command line on an Apple Silicon Mac with macOS 14 or later.</p></article>
+      <article><svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 13h15l5 5h18v22H5zM5 19h38" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><h2>Your files stay local</h2><p>Your shell files live in the app's local container. Commands can make outbound network connections when you choose.</p></article>
+    </section>
+    <section class="closing wrap"><p>Alpine Linux, ready on your Mac.</p><span>Apple Silicon · macOS 14 or later</span></section>
   </main>
+  <footer class="footer wrap"><div><a class="brand" href="./"><span class="prompt" aria-hidden="true">&gt;_</span> gLinux</a><p>A local Alpine Linux shell for your Mac.</p></div><nav aria-label="Footer navigation"><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="https://github.com/sirouni/glinux-legal/issues">Issues</a></nav></footer>
 </body>
 </html>
