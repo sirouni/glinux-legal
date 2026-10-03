@@ -1,0 +1,13 @@
+name: Feedback / 反馈
+description: Share an idea or accessibility feedback / 提出建议或无障碍反馈
+title: "[Feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: "Issues are public. Do not include passwords, personal information, or private files. / Issue 是公开的，请勿发布密码、个人信息或私人文件。"
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback / 反馈内容
+    validations:
+      required: true

@@ -1,0 +1,33 @@
+name: Bug report / 问题报告
+description: Report a problem with gLinux / 报告 gLinux 问题
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Issues are public. Do not include passwords, personal information, or private files. / Issue 是公开的，请勿发布密码、个人信息或私人文件。"
+  - type: input
+    id: version
+    attributes:
+      label: gLinux version / 版本
+      placeholder: "0.1.0 (1)"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and Mac model / macOS 版本与 Mac 型号
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result / 预期与实际结果
+    validations:
+      required: true
