@@ -1,1 +1,20 @@
 :root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#101510;color:#e3ebe1}*{box-sizing:border-box}body{margin:0}main{max-width:760px;margin:0 auto;padding:28px 24px 80px}nav{display:flex;flex-wrap:wrap;gap:20px;padding-bottom:44px}nav a:first-child{color:#70e789;font-weight:700;margin-right:auto}a{color:#70e789}nav a{text-decoration:none}a:hover{text-decoration:underline}h1{font-size:clamp(2.25rem,7vw,4rem);letter-spacing:-.04em;margin:0 0 16px}h2{font-size:1.75rem}p{line-height:1.75;color:#c5d1c5;margin:0 0 20px}.meta{color:#8d9e8d;font-size:.9rem}hr{border:0;border-top:1px solid #344334;margin:48px 0}.button{display:inline-block;border:1px solid #70e789;border-radius:8px;padding:10px 16px;text-decoration:none;margin:4px 8px 8px 0}.button:hover{background:#203b25;text-decoration:none}
+html,body{overflow-x:clip}
+.arch-copy h3{font-size:1.15rem;font-style:normal;font-weight:650;letter-spacing:-.03em;margin:26px 0 8px;color:#e3ebe1}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;color:#d5f5dc}
+/* Hallmark · pre-emit critique: P4 H4 E4 S5 R4 V4 */
+.arch{margin:4px 0 8px}
+.arch-mac,.arch-app,.arch-sandbox{border:1px solid #344334;border-radius:16px}
+.arch-mac{padding:14px 14px 16px;background:#0c120e}
+.arch-app{padding:14px;background:#141c16;border-color:#2a4030}
+.arch-sandbox{padding:14px 14px 16px;background:#101910;border-color:#3d5c44}
+.arch-kicker{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;margin:0 0 12px;color:#70e789;font-size:.95rem;font-weight:700;line-height:1.4}
+.arch-kicker span{color:#8d9e8d;font-weight:500}
+.arch-node{border:1px solid #34573c;border-radius:12px;padding:12px 14px;background:#0c140f}
+.arch-node strong{display:block;font-size:1.05rem;font-weight:650;letter-spacing:-.02em;color:#e3ebe1}
+.arch-node span{display:block;margin-top:3px;color:#c5d1c5;line-height:1.45}
+.arch-step{display:flex;align-items:center;gap:10px;margin:0;padding:8px 0 8px 16px;color:#8d9e8d;font-size:.88rem}
+.arch-step::before{content:"";width:1px;height:18px;background:#70e789;flex:none}
+.arch-branch{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:10px}
+.arch figcaption{margin-top:12px;color:#8d9e8d;font-size:.9rem;line-height:1.5}
+@media(max-width:560px){.arch-branch{grid-template-columns:minmax(0,1fr)}}

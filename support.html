@@ -14,12 +14,107 @@
     <p>Files created in the shell stay in the app's local container. This edition does not include Docker compatibility or a Linux desktop.</p>
     <p>For help, bug reports, or accessibility feedback, <a class="button" href="https://github.com/sirouni/glinux-legal/issues/new/choose">Create an issue ↗</a></p>
     <p>Include your macOS version, Mac model, gLinux version, and steps to reproduce the issue. GitHub issues are public. Do not post passwords, personal information, or private files.</p>
+
+    <h2>How it fits together</h2>
+    <p>A sandbox is one Linux command line and the files that belong to it. The drawing is a single sandbox inside the app. The one included with gLinux is Alpine Linux for aarch64, and that shell is ready when you open the app.</p>
+    <figure class="arch">
+      <div class="arch-mac">
+        <p class="arch-kicker">Apple Silicon Mac</p>
+        <div class="arch-app">
+          <p class="arch-kicker">gLinux</p>
+          <div class="arch-sandbox">
+            <p class="arch-kicker">Sandbox <span>Alpine is included</span></p>
+            <div class="arch-node">
+              <strong>Terminal</strong>
+              <span>Where you type</span>
+            </div>
+            <p class="arch-step">a command</p>
+            <div class="arch-node">
+              <strong>aarch64 program</strong>
+              <span>Runs in this sandbox</span>
+            </div>
+            <div class="arch-branch" aria-label="Where the program can write and connect">
+              <div class="arch-node">
+                <strong>Files</strong>
+                <span>Stay on this Mac</span>
+              </div>
+              <div class="arch-node">
+                <strong>Network</strong>
+                <span>Outbound from the app</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption>One sandbox inside gLinux. The command runs there, and the sandbox’s own files stay on this Mac.</figcaption>
+    </figure>
+    <div class="arch-copy">
+      <h3>Sidebar and tabs</h3>
+      <p>Sandboxes are listed on the left. Select one to use its terminal. The + beside the tabs opens another shell in the same sandbox. Closing a tab does not shut the sandbox down. Shut Down stops its programs and leaves its files. Sandboxes started by an MCP client are separate from the ones in the sidebar; the MCP tab lists them and does not open a shell.</p>
+      <h3>The command</h3>
+      <p>What you type runs as an aarch64 Linux program in that sandbox, inside the gLinux app. There is no second computer and no Linux desktop.</p>
+      <h3>Files</h3>
+      <p>The included sandbox keeps its files in the app’s local container on this Mac. On a new sandbox, Pro can place that sandbox’s storage in a folder you choose. A shared folder is separate: the Mac folder you pick stays where it is, and the sandbox sees it at <code>/workspace</code>.</p>
+      <h3>Network</h3>
+      <p>The included sandbox uses outbound network, so programs can reach the internet through NAT. Another sandbox can be limited to loopback, <code>127.0.0.1</code>. Port mappings are optional and require outbound network.</p>
+      <h3>Pro</h3>
+      <p>The included Alpine sandbox does not need a subscription. Pro adds more sandboxes, other public Arm64 images, more than one CPU core, and a shared folder. Those other images download when you create the sandbox. An image has to be <code>linux/arm64</code> and include <code>/bin/sh</code>.</p>
+      <p>This edition does not include Docker compatibility, a Linux desktop, or an x86 environment.</p>
+    </div>
+
     <hr>
     <h2 lang="zh-Hans">支持</h2>
     <div lang="zh-Hans">
       <p>Mac 版 gLinux 内置 Alpine Linux aarch64 命令行，需要 Apple Silicon Mac 和 macOS 14 或更新版本。打开应用即可进入 shell，无需下载 Linux 镜像。</p>
       <p>shell 中创建的文件保存在应用的本地容器中。本版本不提供 Docker 兼容或 Linux 图形桌面。</p>
       <p>如需帮助、报告问题或反馈无障碍体验，请<a href="https://github.com/sirouni/glinux-legal/issues/new/choose">创建 Issue</a>。请提供 macOS 版本、Mac 型号、gLinux 版本和复现步骤。GitHub Issue 是公开的，请勿发布密码、个人信息或私人文件。</p>
+
+      <h2>结构</h2>
+      <p>一个沙箱是一份 Linux 命令行，加上属于它的文件。下图是应用里的一个沙箱。gLinux 附带的是 aarch64 的 Alpine Linux，打开应用就能进入这个 shell。</p>
+      <figure class="arch">
+        <div class="arch-mac">
+          <p class="arch-kicker">Apple Silicon Mac</p>
+          <div class="arch-app">
+            <p class="arch-kicker">gLinux</p>
+            <div class="arch-sandbox">
+              <p class="arch-kicker">沙箱 <span>已附带 Alpine</span></p>
+              <div class="arch-node">
+                <strong>终端</strong>
+                <span>你在这里输入</span>
+              </div>
+              <p class="arch-step">一条命令</p>
+              <div class="arch-node">
+                <strong>aarch64 程序</strong>
+                <span>在这个沙箱里运行</span>
+              </div>
+              <div class="arch-branch" aria-label="程序可以写到哪里、连到哪里">
+                <div class="arch-node">
+                  <strong>文件</strong>
+                  <span>留在这台 Mac 上</span>
+                </div>
+                <div class="arch-node">
+                  <strong>网络</strong>
+                  <span>从应用向外连接</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption>这是 gLinux 里的一个沙箱。命令在其中运行，沙箱自己的文件留在这台 Mac 上。</figcaption>
+      </figure>
+      <div class="arch-copy">
+        <h3>列表和标签</h3>
+        <p>沙箱列在左侧。选中一个，使用它的终端。标签旁的 + 会在同一个沙箱里再开一个 shell。关掉标签不会关闭沙箱。Shut Down 会停掉它的程序，文件仍然保留。MCP 客户端启动的沙箱与侧边栏里的沙箱分开；MCP 标签只列出它们，不会打开 shell。</p>
+        <h3>命令</h3>
+        <p>你输入的内容会作为 aarch64 Linux 程序，在这个沙箱里、在 gLinux 应用内运行。没有第二台电脑，也没有 Linux 图形桌面。</p>
+        <h3>文件</h3>
+        <p>附带的沙箱把文件放在这台 Mac 的应用容器里。新建沙箱时，Pro 可以把这个沙箱的存储放到你选择的文件夹。共享文件夹是另一件事：你选的 Mac 文件夹留在原处，沙箱里的路径是 <code>/workspace</code>。</p>
+        <h3>网络</h3>
+        <p>附带的沙箱使用向外的网络，程序通过 NAT 访问互联网。其他沙箱可以限制为仅本机回环 <code>127.0.0.1</code>。端口映射是可选的，并且需要向外的网络。</p>
+        <h3>Pro</h3>
+        <p>附带的 Alpine 沙箱不需要订阅。Pro 增加更多沙箱、其他公开的 Arm64 镜像、多于一个 CPU 核，以及共享文件夹。这些其他镜像在创建沙箱时下载。镜像必须是 <code>linux/arm64</code>，并且包含 <code>/bin/sh</code>。</p>
+        <p>本版本不提供 Docker 兼容、Linux 图形桌面或 x86 Linux 环境。</p>
+      </div>
     </div>
   </main>
 </body>
