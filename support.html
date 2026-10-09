@@ -10,6 +10,7 @@
   <main>
     <nav><a href="./">gLinux</a><a href="privacy.html">Privacy</a><a href="https://github.com/sirouni/glinux-legal/issues">Issues ↗</a></nav>
     <h1>Support</h1>
+    <p class="meta">Updated October 9, 2026 · Mac App Store release in preparation.</p>
     <p>gLinux for Mac includes an Alpine Linux aarch64 command line. It requires an Apple Silicon Mac running macOS 14 or later. Open the app to start the shell; no Linux image download is required.</p>
     <p>Files created in the shell stay in the app's local container. This edition does not include Docker compatibility or a Linux desktop.</p>
     <p>For help, bug reports, or accessibility feedback, <a class="button" href="https://github.com/sirouni/glinux-legal/issues/new/choose">Create an issue ↗</a></p>
@@ -50,20 +51,38 @@
     </figure>
     <div class="arch-copy">
       <h3>Sidebar and tabs</h3>
-      <p>Sandboxes are listed on the left. Select one to use its terminal. The + beside the tabs opens another shell in the same sandbox. Closing a tab does not shut the sandbox down. Shut Down stops its programs and leaves its files. Sandboxes started by an MCP client are separate from the ones in the sidebar; the MCP tab lists them and does not open a shell.</p>
+      <p>Sandboxes are listed on the left. Select one to use its terminal. The + beside the tabs opens another shell in the same sandbox. Closing a secondary tab does not shut the sandbox down. The primary shell and the last remaining tab cannot be closed; use Shut Down to stop the sandbox. Shut Down stops its programs and leaves its files. Sandboxes started by an MCP client are separate from the ones in the sidebar; the MCP tab lists them and does not open a shell.</p>
       <h3>The command</h3>
       <p>What you type runs as an aarch64 Linux program in that sandbox, inside the gLinux app. There is no second computer and no Linux desktop.</p>
       <h3>Files</h3>
-      <p>The included sandbox keeps its files in the app’s local container on this Mac. On a new sandbox, Pro can place that sandbox’s storage in a folder you choose. A shared folder is separate: the Mac folder you pick stays where it is, and the sandbox sees it at <code>/workspace</code>.</p>
+      <p>The included sandbox keeps its files in the app’s local container on this Mac. On a new sandbox, Pro can place that sandbox’s storage in a folder you choose. A shared folder is separate: the Mac folder you pick stays where it is, and the sandbox sees it at the guest path you choose (for example, <code>/workspace</code>). You can select multiple shared folders; new mounts default to read-only.</p>
       <h3>Network</h3>
       <p>The included sandbox uses outbound network, so programs can reach the internet through NAT. Another sandbox can be limited to loopback, <code>127.0.0.1</code>. Port mappings are optional and require outbound network.</p>
       <h3>Pro</h3>
-      <p>The included Alpine sandbox does not need a subscription. Pro adds more sandboxes, other public Arm64 images, more than one CPU core, and a shared folder. Those other images download when you create the sandbox. An image has to be <code>linux/arm64</code> and include <code>/bin/sh</code>.</p>
+      <p>The included Alpine sandbox does not need a subscription. Pro adds more sandboxes, other public Arm64 images, multiple CPU cores, shared folders, port mappings and MCP agent sandboxes. The free environment uses one CPU core. Those other images download when you create the sandbox. An image has to be <code>linux/arm64</code> and include <code>/bin/sh</code>.</p>
       <p>This edition does not include Docker compatibility, a Linux desktop, or an x86 environment.</p>
     </div>
 
+
+    <h2 id="subscriptions">Subscriptions and purchases</h2>
+    <h3>Which plan should I choose?</h3>
+    <p>Monthly and yearly plans unlock the same Pro features. In the US storefront, the launch pricing is $4.99 per month or $34.99 per year. Eligible new subscribers can pay $19.99 for the first year, then $34.99 per year. Other storefronts use local prices. The price and offer eligibility shown in the app and Apple’s purchase confirmation apply.</p>
+    <h3>How do I restore Pro?</h3>
+    <p>Use the Apple Account that purchased the subscription, open Unlock Pro and choose Restore Purchases. If products are unavailable, check your internet connection and use Retry. During release preparation, purchases may not yet be available.</p>
+    <h3>How do I cancel or request a refund?</h3>
+    <p>Subscriptions renew automatically unless canceled. Manage or cancel in <a href="https://apps.apple.com/account/subscriptions">Apple account subscriptions</a>. Canceling stops future renewal; paid access normally continues through the current period. For refund requests, use <a href="https://reportaproblem.apple.com/">Apple’s Report a Problem</a>.</p>
+    <h3>What happens when Pro expires?</h3>
+    <p>Running sandboxes and MCP tasks stop when Pro access ends. Sandbox files and configuration remain on this Mac. You can restart the included Alpine environment with one CPU core for free; additional sandboxes become available again when Pro is restored.</p>
+    <h3>Where will the app be available?</h3>
+    <p>The planned Mac App Store release excludes mainland China. Hong Kong, Macau and Taiwan remain included. Availability depends on your App Store country or region.</p>
+    <h2>Files and troubleshooting</h2>
+    <p>Closing the window keeps running sandboxes alive. Shut Down stops the selected sandbox; quitting gLinux stops its sandboxes. Before modifying shared folders or sandbox options, shut the sandbox down and restart it after saving.</p>
+    <p>If a selected Mac folder can no longer be accessed after it is moved or renamed, select it again in Options to renew access. Read-only mounts prevent writes from Linux; select read-write only when you want the sandbox to modify that folder.</p>
+    <p>Pro supports public images for <code>linux/arm64</code> that include <code>/bin/sh</code>. Private image registries are not supported. Some Linux software may be incompatible; include the command and error text when reporting a problem.</p>
+
     <hr>
     <h2 lang="zh-Hans">支持</h2>
+    <p class="meta" lang="zh-Hans">更新于 2026 年 10 月 9 日 · Mac App Store 版本准备上架中。</p>
     <div lang="zh-Hans">
       <p>Mac 版 gLinux 内置 Alpine Linux aarch64 命令行，需要 Apple Silicon Mac 和 macOS 14 或更新版本。打开应用即可进入 shell，无需下载 Linux 镜像。</p>
       <p>shell 中创建的文件保存在应用的本地容器中。本版本不提供 Docker 兼容或 Linux 图形桌面。</p>
@@ -104,17 +123,34 @@
       </figure>
       <div class="arch-copy">
         <h3>列表和标签</h3>
-        <p>沙箱列在左侧。选中一个，使用它的终端。标签旁的 + 会在同一个沙箱里再开一个 shell。关掉标签不会关闭沙箱。Shut Down 会停掉它的程序，文件仍然保留。MCP 客户端启动的沙箱与侧边栏里的沙箱分开；MCP 标签只列出它们，不会打开 shell。</p>
+        <p>沙箱列在左侧。选中一个，使用它的终端。标签旁的 + 会在同一个沙箱里再开一个 shell。关闭附加 shell 标签不会关闭沙箱。主 shell 和最后一个标签不能关闭；需要停止沙箱时请使用 Shut Down。Shut Down 会停掉它的程序，文件仍然保留。MCP 客户端启动的沙箱与侧边栏里的沙箱分开；MCP 标签只列出它们，不会打开 shell。</p>
         <h3>命令</h3>
         <p>你输入的内容会作为 aarch64 Linux 程序，在这个沙箱里、在 gLinux 应用内运行。没有第二台电脑，也没有 Linux 图形桌面。</p>
         <h3>文件</h3>
-        <p>附带的沙箱把文件放在这台 Mac 的应用容器里。新建沙箱时，Pro 可以把这个沙箱的存储放到你选择的文件夹。共享文件夹是另一件事：你选的 Mac 文件夹留在原处，沙箱里的路径是 <code>/workspace</code>。</p>
+        <p>附带的沙箱把文件放在这台 Mac 的应用容器里。新建沙箱时，Pro 可以把这个沙箱的存储放到你选择的文件夹。共享文件夹是另一件事：你选的 Mac 文件夹留在原处，沙箱里的路径由你选择，例如 <code>/workspace</code>。可选择多个共享目录，新挂载默认只读。</p>
         <h3>网络</h3>
         <p>附带的沙箱使用向外的网络，程序通过 NAT 访问互联网。其他沙箱可以限制为仅本机回环 <code>127.0.0.1</code>。端口映射是可选的，并且需要向外的网络。</p>
         <h3>Pro</h3>
-        <p>附带的 Alpine 沙箱不需要订阅。Pro 增加更多沙箱、其他公开的 Arm64 镜像、多于一个 CPU 核，以及共享文件夹。这些其他镜像在创建沙箱时下载。镜像必须是 <code>linux/arm64</code>，并且包含 <code>/bin/sh</code>。</p>
+        <p>附带的 Alpine 沙箱不需要订阅。Pro 增加更多沙箱、其他公开的 Arm64 镜像、多核、共享目录、端口映射和 MCP agent 沙箱。免费环境使用一个 CPU 核。这些其他镜像在创建沙箱时下载。镜像必须是 <code>linux/arm64</code>，并且包含 <code>/bin/sh</code>。</p>
         <p>本版本不提供 Docker 兼容、Linux 图形桌面或 x86 Linux 环境。</p>
       </div>
+
+      <h2 id="subscriptions-zh">订阅和购买</h2>
+      <h3>月付和年付有什么区别？</h3>
+      <p>两种方案解锁相同的 Pro 功能。美国区首发价格为 $4.99/月或 $34.99/年；符合资格的新订阅用户首年 $19.99，之后 $34.99/年。其他地区使用当地价格，以应用内及 Apple 购买确认页面显示的价格和优惠资格为准。</p>
+      <h3>如何恢复 Pro？</h3>
+      <p>使用购买订阅时的 Apple 账户，打开 Unlock Pro，选择 Restore Purchases。如果商品不可用，请检查网络连接并点击 Retry。准备上架期间，购买可能尚未开放。</p>
+      <h3>如何取消订阅或申请退款？</h3>
+      <p>订阅会自动续订，除非你取消。前往 <a href="https://apps.apple.com/account/subscriptions">Apple 账户订阅管理</a>修改或取消。取消后不再续订，已付费权限通常持续至当前周期结束。退款请通过 <a href="https://reportaproblem.apple.com/">Apple 报告问题页面</a>申请。</p>
+      <h3>Pro 到期后，文件还在吗？</h3>
+      <p>Pro 权限结束时，运行中的沙箱和 MCP 任务会停止。沙箱文件和配置仍保存在这台 Mac 上。附带的 Alpine 环境可以按免费单核模式重新启动；恢复 Pro 后可再次启动其他沙箱。</p>
+      <h3>在哪些地区上架？</h3>
+      <p>计划中的 Mac App Store 上架区域不包括中国大陆，香港、澳门和台湾仍包含在内。可用性取决于你的 App Store 国家或地区。</p>
+      <h2>文件和常见问题</h2>
+      <p>关闭窗口会保留运行中的沙箱。Shut Down 停止当前沙箱；退出 gLinux 会停止应用的沙箱。修改共享目录或沙箱选项前，请先关闭沙箱，保存后重新启动。</p>
+      <p>所选 Mac 文件夹移动或改名后，如果无法访问，请在 Options 中重新选择目录以更新授权。只读挂载不允许 Linux 修改文件；希望沙箱修改该目录时，再选择读写模式。</p>
+      <p>Pro 支持包含 <code>/bin/sh</code> 的公开 <code>linux/arm64</code> 镜像，不支持私有镜像仓库。部分 Linux 软件可能不兼容；反馈时请提供执行的命令和错误信息。</p>
+
     </div>
   </main>
 </body>
