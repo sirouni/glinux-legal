@@ -7,7 +7,7 @@
   <meta property="og:title" content="gLinux — Application Sandbox + MCP">
   <meta property="og:description" content="Application Sandbox + MCP + Dashboard. Run applications, connect agents and see live resource activity.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://sirouni.github.io/glinux-legal/assets/glinux-dashboard-web-20261009.jpg">
+  <meta property="og:image" content="https://sirouni.github.io/glinux-legal/assets/glinux-pro-dashboard-20261009.jpg">
   <title>gLinux — Application Sandbox + MCP</title>
   <link rel="icon" href="assets/glinux-icon.png">
   <link rel="stylesheet" href="landing.css">
@@ -41,7 +41,7 @@
         <div class="workflow-node"><span>03 / EXECUTE</span><strong>Application Sandbox</strong><p>Linux programs, files and processes on your Mac.</p></div>
       </div>
       <p class="workflow-caption">MCP workflow illustration · Agent sandboxes require Pro</p>
-      <figure id="product-overview" class="product-window"><a href="assets/glinux-dashboard-web-20261009.jpg" aria-label="Open full-size Dashboard screenshot"><img src="assets/glinux-dashboard-web-20261009.jpg" width="3840" height="1928" alt="gLinux Dashboard showing sandbox count, CPU activity, guest process memory and processes while an Alpine sandbox runs Nginx"></a><figcaption>Nginx serving local HTTP requests in an Alpine sandbox · Dashboard with live resource activity · Captured October 9, 2026.</figcaption></figure>
+      <figure id="product-overview" class="product-window"><a href="assets/glinux-pro-dashboard-20261009.jpg" aria-label="Open full-size Dashboard screenshot"><img src="assets/glinux-pro-dashboard-20261009.jpg" width="2480" height="1376" alt="gLinux Pro feature preview with two terminal sandboxes and three MCP agent sandboxes running together in Dashboard"></a><figcaption>Pro feature preview · Two terminal sandboxes and three MCP agent tasks running in independent Linux environments · Actual live readings.</figcaption></figure>
     </section>
     <section id="features" class="features wrap" aria-label="Core capabilities">
       <article><span class="feature-icon" aria-hidden="true">[ ]</span><h2>Application Sandbox</h2><p>Give each application a Linux environment with its own files, packages and processes. Start, pause or stop it from one app.</p></article>
@@ -65,10 +65,11 @@
         <article><h3>Follow live activity</h3><p>Read CPU history, network upload and download rates, and gLinux app disk I/O. CPU 100% represents one fully used core.</p></article>
         <article><h3>Track local storage</h3><p>See writable sandbox data and downloaded image storage. Shared Mac folders and the bundled Alpine image are excluded.</p></article>
       </div>
+      <figure class="product-window"><img src="assets/glinux-pro-overview-20261009.jpg" width="3840" height="1928" loading="lazy" alt="gLinux Pro Dashboard showing five running sandboxes, two terminals and three agents, with live CPU, memory, process and network readings"><figcaption>Pro feature preview · One resource overview for all five running sandboxes.</figcaption></figure>
       <div class="scenario">
-        <p class="eyebrow">IN PRACTICE / A LOCAL WEB SERVICE</p><h3>Start Nginx. Request a page. Inspect the runtime.</h3>
-        <p>This example serves a page at 127.0.0.1:8080 inside the Linux sandbox. The terminal verifies an HTTP 200 response and lists Nginx processes; the main screenshot shows the same workload in Dashboard.</p>
-        <figure class="product-window"><img src="assets/glinux-nginx-terminal-20261009.jpg" width="1980" height="1376" loading="lazy" alt="gLinux terminal running Nginx and requesting a local page, with HTTP 200 response and live Nginx master and worker processes"><figcaption>Actual Linux commands and output in the free Alpine sandbox. Loopback traffic stays inside the sandbox; this example does not demonstrate a host port mapping.</figcaption></figure>
+        <p class="eyebrow">IN PRACTICE / TERMINALS + AGENTS</p><h3>Five sandboxes. One place to see them all.</h3>
+        <p>API Server and CLI Workbench run as terminal sandboxes. Three demo MCP tasks run API checks, build checks and a file audit in separate environments. Dashboard combines their activity and shows each sandbox’s type and state.</p>
+        <figure class="product-window"><img src="assets/glinux-pro-terminal-20261009.jpg" width="1980" height="1376" loading="lazy" alt="gLinux Pro feature preview with multiple terminal sandboxes and shell tabs"><figcaption>Pro feature preview · Terminal sandboxes with independent files and shell tabs. Commands and results are real.</figcaption></figure>
       </div>
     </section>
     <section id="mcp" class="section wrap" aria-labelledby="mcp-title">
@@ -80,6 +81,7 @@
         <li><strong>Continue interactively</strong><code>glinux_task_shell_open</code><p>Open a PTY shell and exchange input and output for longer-running work.</p></li>
       </ol>
       <p class="section-note">Workflow examples: compile an Arm64 command-line program, run a project’s Linux tests, or inspect a sandbox’s files. MCP tasks are listed separately from terminal sandboxes in the app.</p>
+          <figure class="product-window"><img src="assets/glinux-pro-agents-20261009.jpg" width="1980" height="1376" loading="lazy" alt="gLinux Pro feature preview listing three running MCP agent tasks, their client and current commands"><figcaption>Pro feature preview · Three live tasks created through a demo MCP client. Each task has its own Linux environment.</figcaption></figure>
     </section>
     <section id="pricing" class="section wrap" aria-labelledby="pricing-title">
       <p class="eyebrow">PLANS</p>
