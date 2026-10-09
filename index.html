@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="gLinux brings a ready-to-use Alpine Linux command line to your Apple Silicon Mac. No image download required.">
+  <meta name="description" content="Start with a free Alpine Linux shell on your Mac. Upgrade to Pro for multiple local Linux sandboxes, shared folders and MCP workflows.">
   <meta property="og:title" content="gLinux — Linux, one click away">
-  <meta property="og:description" content="A ready-to-use Alpine Linux shell for your Apple Silicon Mac.">
+  <meta property="og:description" content="A free Alpine shell, with Pro Linux sandboxes for development and MCP agents.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://sirouni.github.io/glinux-legal/assets/glinux-fastfetch.png">
   <title>gLinux — Linux, one click away</title>
@@ -18,6 +18,8 @@
     <a class="brand" href="./" aria-label="gLinux home"><span class="prompt" aria-hidden="true">&gt;_</span> gLinux</a>
     <nav aria-label="Main navigation">
       <a href="#features">Features</a>
+      <a href="#pro">Pro</a>
+      <a href="#pricing">Pricing</a>
       <a href="privacy.html">Privacy</a>
       <a href="support.html">Support</a>
     </nav>
@@ -25,7 +27,8 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <h1 id="hero-title">Linux, one click away.</h1>
-      <p class="hero-subtitle">A ready-to-use Alpine Linux shell for your Mac.</p>
+      <p class="hero-subtitle">Start with Alpine. Build more with local Linux sandboxes.</p>
+      <p class="hero-note">Free Alpine terminal · Pro for development and MCP workflows</p>
       <span class="store-status" aria-label="Coming to Mac App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.1 12.5c0-2 1.6-3 1.7-3.1-.9-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.2.7-2.8.7-.7 0-1.7-.7-2.7-.7-1.4 0-2.8.9-3.5 2.2-1.5 2.6-.4 6.5 1 8.6.7 1 1.5 2 2.5 2 .9 0 1.2-.6 2.6-.6s1.6.6 2.6.6 1.7-.9 2.3-1.9c.8-1.1 1.1-2.2 1.1-2.3-1.5-.6-2.5-2-2.5-3.9ZM15.1 6.6c.6-.7 1.1-1.7 1-2.6-.9.1-1.9.7-2.5 1.4-.6.7-1.1 1.6-1 2.5.9.1 1.9-.5 2.5-1.3Z"/></svg>Coming to Mac App Store</span>
       <figure class="product-window"><img src="assets/glinux-fastfetch.png" width="1203" height="682" alt="A real gLinux window running fastfetch, showing Alpine Linux 3.24 on aarch64"><figcaption>fastfetch installed in the shell with <code>apk add fastfetch</code>.</figcaption></figure>
     </section>
@@ -34,6 +37,30 @@
       <article><span class="feature-icon apple" aria-hidden="true">⌘</span><h2>Built for Apple Silicon</h2><p>Run an aarch64 Linux command line on an Apple Silicon Mac with macOS 14 or later.</p></article>
       <article><svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 13h15l5 5h18v22H5zM5 19h38" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><h2>Your files stay local</h2><p>Your shell files live in the app's local container. Commands can make outbound network connections when you choose.</p></article>
     </section>
+
+    <section id="pro" class="section wrap" aria-labelledby="pro-title">
+      <p class="eyebrow">GLINUX PRO</p>
+      <h2 id="pro-title">A sandbox for each project.</h2>
+      <p class="section-intro">Keep Linux environments separate while working with files and services on your Mac. Pro adds the tools for a repeatable local workflow.</p>
+      <div class="pro-grid">
+        <article><h3>Build in separate environments</h3><p>Create multiple sandboxes with Alpine, Debian, Fedora, Ubuntu or a compatible public Arm64 image. Allocate multiple CPU cores to each sandbox.</p></article>
+        <article><h3>Connect your project</h3><p>Share selected Mac folders at guest paths you choose. New mounts default to read-only. Map local ports to test services running in a sandbox.</p></article>
+        <article><h3>Give your agent a Linux workspace</h3><p>Connect an MCP client to create and use separate agent sandboxes. Give each task its own Linux environment instead of running its commands directly on your Mac.</p></article>
+      </div>
+      <p class="section-note">Additional images download when you create a sandbox. Images must support linux/arm64 and include /bin/sh. Compatibility varies by software; Docker and Linux desktops are not included.</p>
+    </section>
+    <section id="pricing" class="section wrap" aria-labelledby="pricing-title">
+      <p class="eyebrow">PLANS</p>
+      <h2 id="pricing-title">Start free. Upgrade when you need more.</h2>
+      <div class="plans">
+        <article class="plan"><h3>Free</h3><p class="price">$0</p><p>The included Alpine sandbox, one CPU core and a ready-to-use terminal. Files stay on this Mac.</p><a href="support.html">Explore the basics ↗</a></article>
+        <article class="plan"><h3>Pro Monthly</h3><p class="price">$4.99 <span>/ month</span></p><p>Multiple sandboxes, public Arm64 images, multiple CPU cores, shared folders, port mappings and MCP.</p><a href="support.html#subscriptions">Subscription details ↗</a></article>
+        <article class="plan recommended"><p class="eyebrow">FOR ONGOING WORK</p><h3>Pro Yearly</h3><p class="price">$34.99 <span>/ year</span></p><p>All Pro features. Eligible new subscribers pay <strong>$19.99 for the first year</strong>, then $34.99 per year.</p><a href="support.html#subscriptions">Offer and renewal details ↗</a></article>
+      </div>
+      <p class="section-note">US storefront launch prices. Other regions use local prices. Subscriptions renew automatically unless canceled; the app and Apple purchase confirmation show your price and offer eligibility. The Mac App Store release is in preparation; purchases are not yet available.</p>
+      <p class="section-note">Planned availability excludes mainland China. Hong Kong, Macau and Taiwan are included.</p>
+    </section>
+
     <section class="closing wrap"><p>Alpine Linux, ready on your Mac.</p><span>Apple Silicon · macOS 14 or later</span></section>
   </main>
   <footer class="footer wrap"><div><a class="brand" href="./"><span class="prompt" aria-hidden="true">&gt;_</span> gLinux</a><p>A local Alpine Linux shell for your Mac.</p></div><nav aria-label="Footer navigation"><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="https://github.com/sirouni/glinux-legal/issues">Issues</a></nav></footer>
