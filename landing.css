@@ -19,3 +19,13 @@
 .plan .eyebrow{color:#79ee99;font-size:.72rem;line-height:1.4;margin:0 0 14px}
 @media(max-width:900px){.plans{grid-template-columns:1fr}.plan{max-width:none}}
 @media(max-width:760px){.section{padding:45px 0}.pro-grid{grid-template-columns:1fr;gap:18px}.plan{padding:24px}.hero-note{max-width:32ch;margin:-8px auto 28px}.site-header nav{gap:16px}}
+
+.hero{padding-top:72px}.hero h1{font-size:clamp(2.8rem,5.2vw,5.4rem)}.mcp-emphasis{color:#e2eee1}.hero .eyebrow{margin-bottom:22px}
+.hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin:28px 0 0}.hero-actions a{color:#b8f1c8;font-size:.85rem;text-underline-offset:5px;line-height:1.6}
+.workflow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:18px;align-items:center;text-align:left;margin:55px auto 0;width:min(1100px,100%)}
+.workflow-node{border:1px solid #48634e;border-radius:12px;padding:23px;background:#111b14;min-height:165px}.workflow-node>span{color:#79ee99;font-size:.7rem;letter-spacing:.09em}.workflow-node strong{display:block;color:#e2eee1;font-size:1.1rem;line-height:1.4;margin:14px 0 10px}.workflow-node p{color:#a8bba9;font-size:.83rem;line-height:1.65;margin:0}.workflow-arrow{color:#79ee99;font-size:1.6rem}.workflow-caption{font-size:.75rem;color:#9bad9c;margin:16px 0 0}
+.product-window{margin-top:36px}.features{margin-top:85px;margin-bottom:75px}
+.mcp-steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;counter-reset:steps}.mcp-steps li{counter-increment:steps;border-top:1px solid #48634e;padding-top:24px}.mcp-steps li::before{content:'0' counter(steps);display:block;color:#79ee99;font-size:1.7rem;margin-bottom:15px}.mcp-steps strong{display:block;font-size:1.1rem;color:#d9edda;line-height:1.5}.mcp-steps code{display:block;margin-top:16px;font-size:.85rem;color:#79ee99;overflow-wrap:anywhere}.mcp-steps p{color:#b9caba;font-size:.9rem;line-height:1.7}
+@media(max-width:760px){.hero{padding-top:64px}.hero h1{font-size:clamp(2rem,9vw,3.8rem)}.workflow{grid-template-columns:1fr;gap:12px;margin-top:38px}.workflow-node{min-height:0;padding:20px}.workflow-arrow{text-align:center;transform:rotate(90deg)}.mcp-steps{grid-template-columns:1fr}.hero-subtitle{font-size:1rem}.hero-actions a{font-size:.8rem}}
+
+@media(min-width:761px){.hero{padding-top:38px}.hero h1{font-size:clamp(2.8rem,4.5vw,4.8rem)}.hero-subtitle{margin:18px 0 28px}.hero-actions{margin-top:20px}.workflow{margin-top:30px}.workflow-node{min-height:150px;padding:20px}}

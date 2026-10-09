@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Start with a free Alpine Linux shell on your Mac. Upgrade to Pro for multiple local Linux sandboxes, shared folders and MCP workflows.">
-  <meta property="og:title" content="gLinux — Linux, one click away">
-  <meta property="og:description" content="A free Alpine shell, with Pro Linux sandboxes for development and MCP agents.">
+  <meta name="description" content="Run Linux applications in local sandboxes on your Mac. Connect AI agents through MCP to create environments, execute commands and inspect results.">
+  <meta property="og:title" content="gLinux — Application Sandbox + MCP">
+  <meta property="og:description" content="Application Sandbox + MCP. Local Linux environments for your applications and AI agents.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://sirouni.github.io/glinux-legal/assets/glinux-fastfetch.png">
-  <title>gLinux — Linux, one click away</title>
+  <meta property="og:image" content="https://sirouni.github.io/glinux-legal/assets/glinux-sandbox-20261009.jpg">
+  <title>gLinux — Application Sandbox + MCP</title>
   <link rel="icon" href="assets/glinux-icon.png">
   <link rel="stylesheet" href="landing.css">
 </head>
@@ -17,8 +17,8 @@
   <header class="site-header wrap">
     <a class="brand" href="./" aria-label="gLinux home"><span class="prompt" aria-hidden="true">&gt;_</span> gLinux</a>
     <nav aria-label="Main navigation">
-      <a href="#features">Features</a>
-      <a href="#pro">Pro</a>
+      <a href="#sandbox">Sandbox</a>
+      <a href="#mcp">MCP</a>
       <a href="#pricing">Pricing</a>
       <a href="privacy.html">Privacy</a>
       <a href="support.html">Support</a>
@@ -26,28 +26,44 @@
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
-      <h1 id="hero-title">Linux, one click away.</h1>
-      <p class="hero-subtitle">Start with Alpine. Build more with local Linux sandboxes.</p>
-      <p class="hero-note">Free Alpine terminal · Pro for development and MCP workflows</p>
+      <p class="eyebrow">LOCAL LINUX FOR APPS AND AGENTS</p>
+      <h1 id="hero-title">Application Sandbox.<br><span class="mcp-emphasis">MCP for agents.</span></h1>
+      <p class="hero-subtitle">Run Linux applications in their own environments.<br>Give your AI agent a Linux workspace through MCP.</p>
+      <p class="hero-note">Free Alpine sandbox · Pro application sandboxes + MCP</p>
       <span class="store-status" aria-label="Coming to Mac App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.1 12.5c0-2 1.6-3 1.7-3.1-.9-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.2.7-2.8.7-.7 0-1.7-.7-2.7-.7-1.4 0-2.8.9-3.5 2.2-1.5 2.6-.4 6.5 1 8.6.7 1 1.5 2 2.5 2 .9 0 1.2-.6 2.6-.6s1.6.6 2.6.6 1.7-.9 2.3-1.9c.8-1.1 1.1-2.2 1.1-2.3-1.5-.6-2.5-2-2.5-3.9ZM15.1 6.6c.6-.7 1.1-1.7 1-2.6-.9.1-1.9.7-2.5 1.4-.6.7-1.1 1.6-1 2.5.9.1 1.9-.5 2.5-1.3Z"/></svg>Coming to Mac App Store</span>
-      <figure class="product-window"><img src="assets/glinux-fastfetch.png" width="1203" height="682" alt="A real gLinux window running fastfetch, showing Alpine Linux 3.24 on aarch64"><figcaption>fastfetch installed in the shell with <code>apk add fastfetch</code>.</figcaption></figure>
-    </section>
-    <section id="features" class="features wrap" aria-label="Features">
-      <article><span class="feature-icon" aria-hidden="true">&gt;_</span><h2>Ready when you are</h2><p>Open the app and start using the included Alpine Linux command line. No Linux image download or setup step.</p></article>
-      <article><span class="feature-icon apple" aria-hidden="true">⌘</span><h2>Built for Apple Silicon</h2><p>Run an aarch64 Linux command line on an Apple Silicon Mac with macOS 14 or later.</p></article>
-      <article><svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 13h15l5 5h18v22H5zM5 19h38" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><h2>Your files stay local</h2><p>Your shell files live in the app's local container. Commands can make outbound network connections when you choose.</p></article>
-    </section>
-
-    <section id="pro" class="section wrap" aria-labelledby="pro-title">
-      <p class="eyebrow">GLINUX PRO</p>
-      <h2 id="pro-title">A sandbox for each project.</h2>
-      <p class="section-intro">Keep Linux environments separate while working with files and services on your Mac. Pro adds the tools for a repeatable local workflow.</p>
-      <div class="pro-grid">
-        <article><h3>Build in separate environments</h3><p>Create multiple sandboxes with Alpine, Debian, Fedora, Ubuntu or a compatible public Arm64 image. Allocate multiple CPU cores to each sandbox.</p></article>
-        <article><h3>Connect your project</h3><p>Share selected Mac folders at guest paths you choose. New mounts default to read-only. Map local ports to test services running in a sandbox.</p></article>
-        <article><h3>Give your agent a Linux workspace</h3><p>Connect an MCP client to create and use separate agent sandboxes. Give each task its own Linux environment instead of running its commands directly on your Mac.</p></article>
+      <div class="hero-actions"><a href="#sandbox">Explore application sandboxes ↓</a><a href="#mcp">See the MCP workflow ↓</a></div>
+      <div class="workflow" role="img" aria-label="An MCP client sends requests to gLinux, which runs commands in a task's Linux application sandbox and returns output.">
+        <div class="workflow-node"><span>01 / REQUEST</span><strong>Your MCP client</strong><p>Ask an agent to build, test or run.</p></div>
+        <span class="workflow-arrow" aria-hidden="true">→</span>
+        <div class="workflow-node"><span>02 / ORCHESTRATE</span><strong>gLinux + MCP</strong><p>Create a task. Execute commands. Read results.</p></div>
+        <span class="workflow-arrow" aria-hidden="true">→</span>
+        <div class="workflow-node"><span>03 / EXECUTE</span><strong>Application Sandbox</strong><p>Linux programs, files and processes on your Mac.</p></div>
       </div>
-      <p class="section-note">Additional images download when you create a sandbox. Images must support linux/arm64 and include /bin/sh. Compatibility varies by software; Docker and Linux desktops are not included.</p>
+      <p class="workflow-caption">MCP workflow illustration · Agent sandboxes require Pro</p>
+      <figure class="product-window"><img src="assets/glinux-sandbox-20261009.jpg" width="1980" height="1376" alt="gLinux Store interface captured October 9, 2026, with a running Alpine sandbox, terminal tabs, MCP navigation and Linux command output"><figcaption>Store interface captured October 9, 2026 · Included Alpine sandbox in the free edition. MCP agent sandboxes are a Pro feature.</figcaption></figure>
+    </section>
+    <section id="features" class="features wrap" aria-label="Core capabilities">
+      <article><span class="feature-icon" aria-hidden="true">[ ]</span><h2>Application Sandbox</h2><p>Give each application a Linux environment with its own files, packages and processes. Start, pause or stop it from one app.</p></article>
+      <article><span class="feature-icon" aria-hidden="true">↔</span><h2>MCP for AI agents</h2><p>Let an MCP client create a task sandbox, run Linux commands and read output. Keep a task’s packages and files across commands.</p></article>
+      <article><span class="feature-icon" aria-hidden="true">⌘</span><h2>Connect what you choose</h2><p>Share selected Mac directories, choose read-only or read-write access, and map ports for local services. Pro unlocks these connections.</p></article>
+    </section>
+    <section id="sandbox" class="section wrap" aria-labelledby="sandbox-title">
+      <p class="eyebrow">APPLICATION SANDBOX</p><h2 id="sandbox-title">Your application. Its own Linux environment.</h2>
+      <div class="pro-grid">
+        <article><h3>Keep dependencies separate</h3><p>Install Linux packages for one project without mixing them with another sandbox. Choose Alpine or another compatible public Arm64 image with Pro.</p></article>
+        <article><h3>Keep files between sessions</h3><p>Stopping a sandbox keeps its writable files. Restart it to continue working. Shared Mac directories stay at the locations you select.</p></article>
+        <article><h3>Control the runtime</h3><p>Use terminal tabs for interactive work. Configure CPU cores, directory mounts and network options for Pro sandboxes.</p></article>
+      </div>
+    </section>
+    <section id="mcp" class="section wrap" aria-labelledby="mcp-title">
+      <p class="eyebrow">MCP · PRO</p><h2 id="mcp-title">A Linux workspace your agent can use.</h2>
+      <p class="section-intro">Connect an MCP client to gLinux. A task gets its own environment; repeated commands with the same task ID share installed packages and files.</p>
+      <ol class="mcp-steps">
+        <li><strong>Create an environment</strong><code>glinux_task_start</code><p>Start a separate Linux sandbox for a task. Outbound network and writable Mac mounts are enabled only when requested.</p></li>
+        <li><strong>Build, test or run</strong><code>glinux_task_exec</code><p>Execute Linux commands and receive stdout, stderr and an exit code.</p></li>
+        <li><strong>Continue interactively</strong><code>glinux_task_shell_open</code><p>Open a PTY shell and exchange input and output for longer-running work.</p></li>
+      </ol>
+      <p class="section-note">Workflow examples: compile an Arm64 command-line program, run a project’s Linux tests, or inspect a sandbox’s files. MCP tasks are listed separately from terminal sandboxes in the app.</p>
     </section>
     <section id="pricing" class="section wrap" aria-labelledby="pricing-title">
       <p class="eyebrow">PLANS</p>
@@ -61,8 +77,8 @@
       <p class="section-note">Planned availability excludes mainland China. Hong Kong, Macau and Taiwan are included.</p>
     </section>
 
-    <section class="closing wrap"><p>Alpine Linux, ready on your Mac.</p><span>Apple Silicon · macOS 14 or later</span></section>
+    <section class="closing wrap"><p>Application Sandbox + MCP, on your Mac.</p><span>Apple Silicon · macOS 14 or later</span></section>
   </main>
-  <footer class="footer wrap"><div><a class="brand" href="./"><span class="prompt" aria-hidden="true">&gt;_</span> gLinux</a><p>A local Alpine Linux shell for your Mac.</p></div><nav aria-label="Footer navigation"><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="https://github.com/sirouni/glinux-legal/issues">Issues</a></nav></footer>
+  <footer class="footer wrap"><div><a class="brand" href="./"><span class="prompt" aria-hidden="true">&gt;_</span> gLinux</a><p>Local Linux sandboxes for applications and MCP agents.</p></div><nav aria-label="Footer navigation"><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="https://github.com/sirouni/glinux-legal/issues">Issues</a></nav></footer>
 </body>
 </html>
