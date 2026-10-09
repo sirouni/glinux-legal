@@ -38,3 +38,5 @@
 .hero .product-window{width:min(1240px,100%)}
 
 .sandbox-icon{flex-shrink:0;overflow:visible}
+
+.store-status{text-decoration:none}.store-status:hover{background:#91f4a7}
