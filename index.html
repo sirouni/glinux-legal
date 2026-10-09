@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Run Linux applications in local sandboxes on your Mac. Connect AI agents through MCP to create environments, execute commands and inspect results.">
+  <meta name="description" content="Run Linux applications in local sandboxes on your Mac. Connect AI agents through MCP and watch sandbox resource activity in Dashboard.">
   <meta property="og:title" content="gLinux — Application Sandbox + MCP">
-  <meta property="og:description" content="Application Sandbox + MCP. Local Linux environments for your applications and AI agents.">
+  <meta property="og:description" content="Application Sandbox + MCP + Dashboard. Run applications, connect agents and see live resource activity.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://sirouni.github.io/glinux-legal/assets/glinux-sandbox-20261009.jpg">
+  <meta property="og:image" content="https://sirouni.github.io/glinux-legal/assets/glinux-dashboard-web-20261009.jpg">
   <title>gLinux — Application Sandbox + MCP</title>
   <link rel="icon" href="assets/glinux-icon.png">
   <link rel="stylesheet" href="landing.css">
@@ -19,6 +19,7 @@
     <nav aria-label="Main navigation">
       <a href="#sandbox">Sandbox</a>
       <a href="#mcp">MCP</a>
+      <a href="#dashboard">Dashboard</a>
       <a href="#pricing">Pricing</a>
       <a href="privacy.html">Privacy</a>
       <a href="support.html">Support</a>
@@ -29,7 +30,7 @@
       <p class="eyebrow">LOCAL LINUX FOR APPS AND AGENTS</p>
       <h1 id="hero-title">Application Sandbox.<br><span class="mcp-emphasis">MCP for agents.</span></h1>
       <p class="hero-subtitle">Run Linux applications in their own environments.<br>Give your AI agent a Linux workspace through MCP.</p>
-      <p class="hero-note">Free Alpine sandbox · Pro application sandboxes + MCP</p>
+      <p class="hero-note">Application Sandbox · MCP · Live Dashboard</p>
       <span class="store-status" aria-label="Coming to Mac App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.1 12.5c0-2 1.6-3 1.7-3.1-.9-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.2.7-2.8.7-.7 0-1.7-.7-2.7-.7-1.4 0-2.8.9-3.5 2.2-1.5 2.6-.4 6.5 1 8.6.7 1 1.5 2 2.5 2 .9 0 1.2-.6 2.6-.6s1.6.6 2.6.6 1.7-.9 2.3-1.9c.8-1.1 1.1-2.2 1.1-2.3-1.5-.6-2.5-2-2.5-3.9ZM15.1 6.6c.6-.7 1.1-1.7 1-2.6-.9.1-1.9.7-2.5 1.4-.6.7-1.1 1.6-1 2.5.9.1 1.9-.5 2.5-1.3Z"/></svg>Coming to Mac App Store</span>
       <div class="hero-actions"><a href="#sandbox">Explore application sandboxes ↓</a><a href="#mcp">See the MCP workflow ↓</a></div>
       <div class="workflow" role="img" aria-label="An MCP client sends requests to gLinux, which runs commands in a task's Linux application sandbox and returns output.">
@@ -40,11 +41,12 @@
         <div class="workflow-node"><span>03 / EXECUTE</span><strong>Application Sandbox</strong><p>Linux programs, files and processes on your Mac.</p></div>
       </div>
       <p class="workflow-caption">MCP workflow illustration · Agent sandboxes require Pro</p>
-      <figure class="product-window"><img src="assets/glinux-sandbox-20261009.jpg" width="1980" height="1376" alt="gLinux Store interface captured October 9, 2026, with a running Alpine sandbox, terminal tabs, MCP navigation and Linux command output"><figcaption>Store interface captured October 9, 2026 · Included Alpine sandbox in the free edition. MCP agent sandboxes are a Pro feature.</figcaption></figure>
+      <figure id="product-overview" class="product-window"><a href="assets/glinux-dashboard-web-20261009.jpg" aria-label="Open full-size Dashboard screenshot"><img src="assets/glinux-dashboard-web-20261009.jpg" width="3840" height="1928" alt="gLinux Dashboard showing sandbox count, CPU activity, guest process memory and processes while an Alpine sandbox runs Nginx"></a><figcaption>Nginx serving local HTTP requests in an Alpine sandbox · Dashboard with live resource activity · Captured October 9, 2026.</figcaption></figure>
     </section>
     <section id="features" class="features wrap" aria-label="Core capabilities">
       <article><span class="feature-icon" aria-hidden="true">[ ]</span><h2>Application Sandbox</h2><p>Give each application a Linux environment with its own files, packages and processes. Start, pause or stop it from one app.</p></article>
       <article><span class="feature-icon" aria-hidden="true">↔</span><h2>MCP for AI agents</h2><p>Let an MCP client create a task sandbox, run Linux commands and read output. Keep a task’s packages and files across commands.</p></article>
+      <article><span class="feature-icon" aria-hidden="true">▥</span><h2>Live Dashboard</h2><p>See running sandboxes, CPU activity, guest process memory, network rates and disk activity in one view.</p></article>
       <article><span class="feature-icon" aria-hidden="true">⌘</span><h2>Connect what you choose</h2><p>Share selected Mac directories, choose read-only or read-write access, and map ports for local services. Pro unlocks these connections.</p></article>
     </section>
     <section id="sandbox" class="section wrap" aria-labelledby="sandbox-title">
@@ -53,6 +55,20 @@
         <article><h3>Keep dependencies separate</h3><p>Install Linux packages for one project without mixing them with another sandbox. Choose Alpine or another compatible public Arm64 image with Pro.</p></article>
         <article><h3>Keep files between sessions</h3><p>Stopping a sandbox keeps its writable files. Restart it to continue working. Shared Mac directories stay at the locations you select.</p></article>
         <article><h3>Control the runtime</h3><p>Use terminal tabs for interactive work. Configure CPU cores, directory mounts and network options for Pro sandboxes.</p></article>
+      </div>
+    </section>
+    <section id="dashboard" class="section wrap" aria-labelledby="dashboard-title">
+      <p class="eyebrow">DASHBOARD</p><h2 id="dashboard-title">See what your sandboxes are doing.</h2>
+      <p class="section-intro">Run your application, then watch its environment. Dashboard brings activity and storage together for terminal sandboxes and MCP tasks.</p>
+      <div class="pro-grid">
+        <article><h3>Know what is running</h3><p>View sandbox state, terminal and agent counts, CPU usage, guest RSS and process counts.</p></article>
+        <article><h3>Follow live activity</h3><p>Read CPU history, network upload and download rates, and gLinux app disk I/O. CPU 100% represents one fully used core.</p></article>
+        <article><h3>Track local storage</h3><p>See writable sandbox data and downloaded image storage. Shared Mac folders and the bundled Alpine image are excluded.</p></article>
+      </div>
+      <div class="scenario">
+        <p class="eyebrow">IN PRACTICE / A LOCAL WEB SERVICE</p><h3>Start Nginx. Request a page. Inspect the runtime.</h3>
+        <p>This example serves a page at 127.0.0.1:8080 inside the Linux sandbox. The terminal verifies an HTTP 200 response and lists Nginx processes; the main screenshot shows the same workload in Dashboard.</p>
+        <figure class="product-window"><img src="assets/glinux-nginx-terminal-20261009.jpg" width="1980" height="1376" loading="lazy" alt="gLinux terminal running Nginx and requesting a local page, with HTTP 200 response and live Nginx master and worker processes"><figcaption>Actual Linux commands and output in the free Alpine sandbox. Loopback traffic stays inside the sandbox; this example does not demonstrate a host port mapping.</figcaption></figure>
       </div>
     </section>
     <section id="mcp" class="section wrap" aria-labelledby="mcp-title">
@@ -69,7 +85,7 @@
       <p class="eyebrow">PLANS</p>
       <h2 id="pricing-title">Start free. Upgrade when you need more.</h2>
       <div class="plans">
-        <article class="plan"><h3>Free</h3><p class="price">$0</p><p>The included Alpine sandbox, one CPU core and a ready-to-use terminal. Files stay on this Mac.</p><a href="support.html">Explore the basics ↗</a></article>
+        <article class="plan"><h3>Free</h3><p class="price">$0</p><p>The included Alpine sandbox, one CPU core, terminal tabs and Dashboard. Files stay on this Mac.</p><a href="support.html">Explore the basics ↗</a></article>
         <article class="plan"><h3>Pro Monthly</h3><p class="price">$4.99 <span>/ month</span></p><p>Multiple sandboxes, public Arm64 images, multiple CPU cores, shared folders, port mappings and MCP.</p><a href="support.html#subscriptions">Subscription details ↗</a></article>
         <article class="plan recommended"><p class="eyebrow">FOR ONGOING WORK</p><h3>Pro Yearly</h3><p class="price">$34.99 <span>/ year</span></p><p>All Pro features. Eligible new subscribers pay <strong>$19.99 for the first year</strong>, then $34.99 per year.</p><a href="support.html#subscriptions">Offer and renewal details ↗</a></article>
       </div>
